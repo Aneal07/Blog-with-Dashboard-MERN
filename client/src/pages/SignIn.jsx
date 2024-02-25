@@ -12,7 +12,7 @@ const SignIn = () => {
     setFormData({...formData, [e.target.id]: e.target.value.trim() })
   }
 
-  const handlesubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if( !formData.email || !formData.password){
       return setErrorMessage('Please fill out all fields.')
@@ -61,7 +61,7 @@ const SignIn = () => {
         </div>
         {/*right*/}
         <div className="flex-1">
-          <form className='flex flex-col gap-4' onSubmit={handlesubmit}>
+          <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <div>
               <Label value='Your Email' />
                 <TextInput
@@ -93,7 +93,7 @@ const SignIn = () => {
             </Button>
           </form>
           <div className="flex gap-2 text-sm mt-5">
-            <span>Don't have an account?</span>
+            <span>Dont have an account?</span>
             <Link to='/sign-up' className='text-blue-500'>Sign Up</Link>
           </div>
           {
