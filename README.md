@@ -1,3 +1,4 @@
 MERN PROJECT
 
-Incomplete
+## Description
+This project is ongoing.
