@@ -1,4 +1,4 @@
 MERN PROJECT
 
 ## Description
-This project is ongoing.
+Ongoing project/incomplete.
