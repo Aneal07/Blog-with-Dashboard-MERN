@@ -173,20 +173,16 @@ const DashProfile = () => {
             <span className='cursor-pointer'>Delete Account</span>
             <span className='cursor-pointer'>Sign Out</span>
         </div>
-        {
-            updateSuccess && (
-                <Alert color='success' className='mt-5'>
-                    {updateUserSuccess}
-                </Alert>
-            )
-        }
-        {
-            updateUserError && (
-                <Alert color='failure' className='mt-5'>
-                    {updateUserError}
-                </Alert>
-            )
-        }
+           {updateUserSuccess && (
+        <Alert color='success' className='mt-5'>
+          {updateUserSuccess}
+        </Alert>
+      )}
+      {updateUserError && (
+        <Alert color='failure' className='mt-5'>
+          {updateUserError}
+        </Alert>
+      )}
     </div>
   )
 }
