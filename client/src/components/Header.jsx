@@ -36,7 +36,7 @@ const Header = () => {
        font-semibold dark:text-white">
         <span 
         className="px-2 py-1
-         bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
+         bg-gradient-to-r from-pink-500 via-teal-500 to-blue-500 
          rounded-lg text-white">
         Mighty's
             </span>
