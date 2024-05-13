@@ -7,7 +7,7 @@ const PostPage = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const [post, setPost] = useState(null)
-
+console.log(post)
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -20,7 +20,7 @@ const PostPage = () => {
           return
         }
         if (res.ok) {
-          setPost(data.post[0])
+          setPost(data.posts[0])
           setLoading(false)
           setError(false)
         }
