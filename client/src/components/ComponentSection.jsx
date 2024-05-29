@@ -32,6 +32,7 @@ const ComponentSection = ({ postId }) => {
       if (res.ok) {
         setComment('')
         setCommentError(null)
+        setComment([data, ...comments])
       }
     } catch (error) {
       setCommentError(error.message)
