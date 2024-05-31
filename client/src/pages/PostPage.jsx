@@ -36,21 +36,20 @@ const PostPage = () => {
     fetchPost()
   }, [postSlug])
 
-useEffect(() => {
-  try {
-    const fetchRecentPosts = async () => {
-      const res = await fetch(`/api/post/getposts?limit=3`)
-      const data = await res.json()
-      if (res.ok) {
-        setRecentPosts(data.posts)
+  useEffect(() => {
+    try {
+      const fetchRecentPosts = async () => {
+        const res = await fetch(`/api/post/getposts?limit=3`)
+        const data = await res.json()
+        if (res.ok) {
+          setRecentPosts(data.posts)
+        }
       }
+      fetchRecentPosts()
+    } catch (error) {
+      console.log(error.message)
     }
-    fetchRecentPosts()
-  } catch (error) {
-    console.log(error.message)
-  }
-}, [])
-
+  }, [])
 
   if (loading)
     return (
@@ -67,7 +66,7 @@ useEffect(() => {
         to={`/search?category=${post && post.category}`}
         className='self-center mt-5'
       >
-        <Button  pill size='xs'>
+        <Button pill size='xs'>
           {post && post.category}
         </Button>
       </Link>
@@ -85,20 +84,17 @@ useEffect(() => {
       <div
         className='p-3 max-w-2xl mx-auto w-full post-content'
         dangerouslySetInnerHTML={{ __html: post && post.content }}
-      >
-   
-      </div>
+      ></div>
       <div className='max-w-4xl mx-auto w-full'></div>
-      <CallToAction/>
-      <ComponentSection  postId={post._id}/>
+      <CallToAction />
+      <ComponentSection postId={post._id} />
       <div className='flex flex-col justify-center items-center mb-5'>
-  <h1 className='text-xl mt-5'>Recent articles</h1>
-  <div className='flex flex-wrap gap-5 mt-5 justify-center'>
-    {recentPosts &&
-      recentPosts.map(post => <PostCard key={post._id} post={post} />)}
-  </div>
-</div>
-
+        <h1 className='text-xl mt-5'>Recent articles</h1>
+        <div className='flex flex-wrap gap-5 mt-5 justify-center'>
+          {recentPosts &&
+            recentPosts.map(post => <PostCard key={post._id} post={post} />)}
+        </div>
+      </div>
     </main>
   )
 }
