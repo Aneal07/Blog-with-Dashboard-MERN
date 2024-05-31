@@ -1,5 +1,4 @@
 import { Alert, Button, FileInput, Select, TextInput } from 'flowbite-react'
-import { useEffect, useState } from 'react'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import {
@@ -9,18 +8,20 @@ import {
   uploadBytesResumable
 } from 'firebase/storage'
 import { app } from '../firebase'
+import { useEffect, useState } from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-const UpdatePost = () => {
+export default function UpdatePost () {
   const [file, setFile] = useState(null)
   const [imageUploadProgress, setImageUploadProgress] = useState(null)
   const [imageUploadError, setImageUploadError] = useState(null)
   const [formData, setFormData] = useState({})
   const [publishError, setPublishError] = useState(null)
   const { postId } = useParams()
+
   const navigate = useNavigate()
   const { currentUser } = useSelector(state => state.user)
 
@@ -39,13 +40,14 @@ const UpdatePost = () => {
           setFormData(data.posts[0])
         }
       }
+
       fetchPost()
     } catch (error) {
       console.log(error.message)
     }
   }, [postId])
 
-  const handleUploadImage = async () => {
+  const handleUpdloadImage = async () => {
     try {
       if (!file) {
         setImageUploadError('Please select an image')
@@ -81,7 +83,6 @@ const UpdatePost = () => {
       console.log(error)
     }
   }
-
   const handleSubmit = async e => {
     e.preventDefault()
     try {
@@ -111,7 +112,7 @@ const UpdatePost = () => {
   }
   return (
     <div className='p-3 max-w-3xl mx-auto min-h-screen'>
-      <h1 className='text-center text-3xl my-7 font-semibold'>Edit post</h1>
+      <h1 className='text-center text-3xl my-7 font-semibold'>Update post</h1>
       <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
         <div className='flex flex-col gap-4 sm:flex-row justify-between'>
           <TextInput
@@ -146,7 +147,7 @@ const UpdatePost = () => {
             gradientDuoTone='purpleToBlue'
             size='sm'
             outline
-            onClick={handleUploadImage}
+            onClick={handleUpdloadImage}
             disabled={imageUploadProgress}
           >
             {imageUploadProgress ? (
@@ -179,11 +180,11 @@ const UpdatePost = () => {
             setFormData({ ...formData, content: value })
           }}
         />
-        <Button type='submit' gradientDuoTone='purpleToBlue'>
-          Update Post
+        <Button type='submit' gradientDuoTone='purpleToPink'>
+          Update post
         </Button>
         {publishError && (
-          <Alert color='failure' className='mt-5'>
+          <Alert className='mt-5' color='failure'>
             {publishError}
           </Alert>
         )}
@@ -191,5 +192,3 @@ const UpdatePost = () => {
     </div>
   )
 }
-
-export default UpdatePost
