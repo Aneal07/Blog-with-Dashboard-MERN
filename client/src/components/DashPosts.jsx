@@ -131,7 +131,7 @@ const DashPosts = () => {
       ) : (
         <p>You have no post yet!</p>
       )}
-      ;<Modal show={showModal} onClose={() => setShowModal(false)} popup size='md'>
+      <Modal show={showModal} onClose={() => setShowModal(false)} popup size='md'>
   <Modal.Header />
   <Modal.Body>
     <div className='text-center'>

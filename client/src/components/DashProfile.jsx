@@ -277,4 +277,3 @@ const DashProfile = () => {
 }
 
 export default DashProfile
-DashProfile
