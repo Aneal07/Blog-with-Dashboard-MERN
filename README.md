@@ -25,9 +25,7 @@ RESTful API: Backend built with Node.js and Express.js, providing a RESTful API 
 
 Technologies Used:
 
-Frontend: React.js, Redux (for state management), HTML/CSS, Bootstrap (or other UI frameworks).
-Backend: Node.js, Express.js, MongoDB (using Mongoose for ORM).
+Frontend: React.js, Redux (for state management), HTML/CSS, tailwind.
+Backend: Node.js, Express.js, MongoDB.
 Authentication: JSON Web Tokens (JWT) for secure authentication and authorization.
-Deployment: Deployment might be handled using platforms like Heroku, AWS, or Vercel.
-Purpose:
 The "Blog with Dashboard" project aims to provide a robust blogging platform with an intuitive dashboard interface, suitable for both individual bloggers and organizations looking to manage content effectively. It demonstrates proficiency in MERN stack development, including frontend design, backend development, database management, and user authentication.
