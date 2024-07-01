@@ -1,7 +1,8 @@
-
+## need to fix a few bugs/API.
 Project Description: Blog with Dashboard (MERN Stack)
 Project Overview:
 The "Blog with Dashboard" project is a full-stack web application built using the MERN stack (MongoDB, Express.js, React, Node.js). It provides a platform for users to create, read, update, and delete blog posts through an intuitive user interface. Additionally, it includes an administrative dashboard that allows authorized users to manage blog content efficiently.
+
 
 Key Features:
 
@@ -24,9 +25,7 @@ RESTful API: Backend built with Node.js and Express.js, providing a RESTful API 
 
 Technologies Used:
 
-Frontend: React.js, Redux (for state management), HTML/CSS, Bootstrap (or other UI frameworks).
-Backend: Node.js, Express.js, MongoDB (using Mongoose for ORM).
+Frontend: React.js, Redux (for state management), HTML/CSS, tailwind.
+Backend: Node.js, Express.js, MongoDB.
 Authentication: JSON Web Tokens (JWT) for secure authentication and authorization.
-Deployment: Deployment might be handled using platforms like Heroku, AWS, or Vercel.
-Purpose:
 The "Blog with Dashboard" project aims to provide a robust blogging platform with an intuitive dashboard interface, suitable for both individual bloggers and organizations looking to manage content effectively. It demonstrates proficiency in MERN stack development, including frontend design, backend development, database management, and user authentication.
