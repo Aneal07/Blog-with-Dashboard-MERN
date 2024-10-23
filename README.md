@@ -1,19 +1,24 @@
-##Blog Application (MERN Stack)
+Blog Application (MERN Stack)
 
-Overview
+Overview:
+
 This is a full-stack blog application built with the MERN stack (MongoDB, Express, React, Node.js). 
 It allows users to create, view, edit, and delete blog posts. The project demonstrates CRUD operations, authentication, and dynamic content rendering.
 
-#Features
+Features
+
 User authentication (login/register)
 Create, read, update, and delete blog posts
 Responsive design
 RESTful API
 
-#Tech Stack
+Tech Stack
 Frontend: React, Tailwind Css
+
 Backend: Node.js, Express
+
 Database: MongoDB (Mongoose)
+
 Authentication: JWT (JSON Web Token)
 
 #Setup Instructions
