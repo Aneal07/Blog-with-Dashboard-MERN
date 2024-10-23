@@ -8,11 +8,15 @@ It allows users to create, view, edit, and delete blog posts. The project demons
 Features
 
 User authentication (login/register)
+
 Create, read, update, and delete blog posts
+
 Responsive design
+
 RESTful API
 
 Tech Stack
+
 Frontend: React, Tailwind Css
 
 Backend: Node.js, Express
